@@ -1,5 +1,5 @@
 import logging
-
+import os
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from readFile import *
@@ -46,9 +46,25 @@ def sendTimeTable(callbackdata):
     return data
 
 
+help_keyboard = [[InlineKeyboardButton(
+    "Join Channel", url="https://t.me/bustudymate")]]
+help_reply_markup = InlineKeyboardMarkup(help_keyboard)
+
+
 def start(update, context):
-    update.message.reply_text(
-        'Choose Your University:', reply_markup=createUniversityKeyboard())
+    context.bot.send_chat_action(
+        chat_id=update.message.chat_id, action="typing")
+    user = update.message.from_user
+    channel_member = context.bot.get_chat_member(
+        os.environ.get("CHANNEL_ID"), user_id=update.message.chat_id)
+    status = channel_member["status"]
+    if(status == 'left'):
+        context.bot.send_message(chat_id=update.message.chat_id,
+                                 text=f"Hi {user.first_name}, to use me(bot) you have to be a member of the BUStudymate channel in order to stay updated with the latest updates.\nPlease click below button to join and /start the bot again.", reply_markup=help_reply_markup)
+        return
+    else:
+        update.message.reply_text(
+            'Choose Your University:', reply_markup=createUniversityKeyboard())
 
 
 def end(update, context):
@@ -88,11 +104,18 @@ def callBackQuery(update, context):
         end(update, context)
 
 
+def error(update, context):
+    """Log Errors caused by Updates."""
+    logger.warning('Update "%s" caused error "%s"', update, context.error)
+
+
 def main():
     """Start the bot."""
     # Create the Updater and pass it your bot's token.
-    updater = Updater("1673078957:AAGJdst1sKMeQv_6YcnIFZTms_fzVVfCOVk")
 
+    updater = Updater(
+        token=os.environ.get("BOT_TOKEN"), use_context=True)
+    PORT = int(os.environ.get('PORT', '8443'))
     # Get the dispatcher to register handlers
     dispatcher = updater.dispatcher
 
@@ -101,8 +124,13 @@ def main():
     dispatcher.add_handler(CommandHandler("help", help_command))
     updater.dispatcher.add_handler(CallbackQueryHandler(callBackQuery))
 
+    dispatcher.add_error_handler(error)
     # Start the Bot
-    updater.start_polling()
+    updater.start_webhook(listen="0.0.0.0", port=PORT,
+                          url_path=os.environ.get("BOT_TOKEN"))
+    updater.bot.set_webhook(
+        os.environ.get("HOST_NAME") + os.environ.get("BOT_TOKEN"))
+    logging.info("Starting Long Polling!")
 
     updater.idle()
 

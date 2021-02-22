@@ -6,3 +6,4 @@ lib64
 share
 pyvenv.cfg
 test.py
+dev.py
