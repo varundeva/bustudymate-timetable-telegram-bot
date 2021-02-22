@@ -1,0 +1,29 @@
+{
+    "name": "Bangalore University Timetable Bot",
+    "description": "This bot will give you Bangalore university time table",
+    "repository": "https://github.com/varundeva/bustudymate-timetable-telegram-bot",
+    "keywords": [
+      "telegram",
+      "pyrogram",
+      "telegram bot"
+    ],
+    "env": {
+       "BOT_TOKEN": {
+        "description": "Your Bot token from @Botfather",
+        "value": ""
+      },
+      "CHANNEL_ID": {
+        "description": "Get Your Telegram Channel ID. know more at Readme file of repository",
+        "value": ""
+      },
+      "HOST_NAME": {
+        "description": "Your Host Name. that is heroku url for your app",
+        "value": ""
+      }
+     },
+     "buildpacks": [
+      {
+        "url": "heroku/python"
+      }
+    ]
+  }
