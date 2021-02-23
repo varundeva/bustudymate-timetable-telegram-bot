@@ -43,7 +43,15 @@ def createCourseKeyboard(callbackdata):
 
 def sendTimeTable(callbackdata):
     data = getTimeTable(callbackdata)
-    return data
+    dataString = ""
+    for i, j in enumerate(data):
+        if i == 0:
+            heading = f"<b><u>{j['University']} {j['Course']} - Time Table </u></b>\n\n🎓 University - <b>{j['University']}</b>\n📚 Course - <b>{j['Course']}</b>\n📖 Semester - <b>{j['Sem']}</b>\n\n"
+            dataString += heading
+        singleData = f"📝 Subject Name - <b>{j['SubjectName']}</b>\n🗓️ Exam Date - <b>{j['Date']}</b>\n⏰ Exam Time - <b>{j['Time']}</b>\n❓ QP Code - <b>{j['QPCode']}</b>\n\n\n"
+        dataString += singleData
+
+    return dataString
 
 
 help_keyboard = [[InlineKeyboardButton(
@@ -64,7 +72,7 @@ def start(update, context):
         return
     else:
         update.message.reply_text(
-            'Choose Your University:', reply_markup=createUniversityKeyboard())
+            'Choose Your 🎓University ⬇️', reply_markup=createUniversityKeyboard())
 
 
 def end(update, context):
@@ -87,13 +95,14 @@ def callBackQuery(update, context):
     try:
         if query_data in getAllUniversities():
             update.callback_query.edit_message_text(
-                'Choose Your Semester:', reply_markup=createSemesterKeyboard(query_data))
+                'Choose Your 📖Semester⬇️', reply_markup=createSemesterKeyboard(query_data))
         print(len(callBackData))
         if len(callBackData) == 2 and query_data in getAllSemesterOfUniversity(callBackData[0]):
             update.callback_query.edit_message_text(
-                'Choose Your Course:', reply_markup=createCourseKeyboard(callBackData))
+                'Choose Your 📚Course⬇️', reply_markup=createCourseKeyboard(callBackData))
         if len(callBackData) == 3 and query_data in getAllCourseOfSemester(callBackData):
-            update.callback_query.edit_message_text(getTimeTable(callBackData))
+            update.callback_query.edit_message_text(
+                sendTimeTable(callBackData), parse_mode="HTML")
             callBackData.clear()
             update.callback_query.message.reply_text(
                 'if you want again send /start')

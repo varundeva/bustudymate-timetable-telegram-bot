@@ -12,8 +12,7 @@ def getTimeTable(callBackData):
                 heading = row
             elif (callBackData[0].lower() == row[0].lower()) and (callBackData[1].lower() == row[4].lower()) and (callBackData[2].lower() == row[1].lower()):
                 timetable.append(dict(zip(heading, row)))
-    return json.dumps(timetable, indent=1)
-
+    return timetable
 
 
 def getAllCourseOfSemester(callBackData):
