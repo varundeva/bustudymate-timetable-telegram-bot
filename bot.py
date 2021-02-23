@@ -109,8 +109,8 @@ def start(update, context):
         os.environ.get("CHANNEL_ID"), user_id=update.message.chat_id)
     status = channel_member["status"]
     if(status == 'left'):
-        context.bot.send_message(chat_id=update.message.chat_id,
-                                 text=f"Hi {user.first_name}👋🏻, to use me(Bot🤖) you have to be a member of the BUStudymate channel in order to stay updated with the latest updates.\n\n<b>Please click below button to join and then /start the bot again.</b>", reply_markup=help_reply_markup)
+        update.message.reply_html(
+            text=f"Hi {user.first_name}👋🏻, to use me(Bot🤖) you have to be a member of the BUStudymate channel in order to stay updated with the latest updates.\n\n<b>Please click below button to join and then /start the bot again.</b>", reply_markup=help_reply_markup)
         return
     else:
         update.message.reply_text(
