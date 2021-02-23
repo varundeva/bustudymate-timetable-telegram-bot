@@ -11,9 +11,37 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
+helpText = f'''This Bot🤖 will send you Timetable of your course
+
+<b>How to Get All Timetable of my Course?</b>
+First Send /start command to bot🤖
+After that follow instructions
+1️⃣ Select Your University 🎓
+2️⃣ Select Your Semester 📚
+3️⃣ Select Your Course 📖
+✅ You'll Receive Timetables
+
+<b>How to Get Single Subject Date and Time?</b>
+To get perticular subject date and time use /qpcode command
+
+1️⃣Send /qpcode with your subject QPCode
+    EX - /qpcode 12345
+    type /qpcode give a single space then type QPCode and send
+2️⃣This will reply you Date and Time of that Subject
+✅Done
+
+If you have any question contact us by using /contact command[You'll get contact details]
+
+➡️ Kindly Report if you have any issues regarding 🤖bot as well as the Data 🤖bot returned
+➡️ Don't follow blindly Bot🤖 given data kindly cross verify with the timetable in university website🌐
+'''
+
 
 def help_command(update, context):
-    update.message.reply_text('Help!')
+    update.message.reply_html(helpText)
+
+
+footer = f"<b>🤝All The Best for your Exams📚</b>\n<b>👏Do Well in All the Exams 📚</b>\n\n\n\n🔗Connect With Us\n\n\nFor Study Materials 📖 Check<a href='https://bustudymate.in'> BUStudymate Blog</a>\n\nFor Instant Updates📢 Follow On <a href = 'https://instagram.com/bustudymate'>Instagram🖼️</a>\n\nFor 👩‍💻Discussion/Q & A⁉️ - <a href='https://forum.bustudymate.in'>Join BUForum</a>\n\nFeedbacks👏/ Report❌ Email ✉️ - admin@bustudymate.in\n\nDonate💵 to Run the Service - contact BUStudymate"
 
 
 def createUniversityKeyboard():
@@ -58,10 +86,14 @@ def sendTimeTable(callbackdata, update):
     print(len(dataList))
     if len(dataList) == 0:
         update.callback_query.edit_message_text(dataString, parse_mode="HTML")
+        update.callback_query.message.reply_html(
+            footer, disable_web_page_preview=True)
     else:
         update.callback_query.message.delete()
         for i in dataList:
             update.callback_query.message.reply_html(i)
+        update.callback_query.message.reply_html(
+            footer, disable_web_page_preview=True)
 
 
 help_keyboard = [[InlineKeyboardButton(
@@ -83,6 +115,13 @@ def start(update, context):
     else:
         update.message.reply_text(
             'Choose Your 🎓University ⬇️', reply_markup=createUniversityKeyboard())
+
+
+contactString = "🔗Connect With Us\n\n\nFor Study Materials 📖 Check<a href='https://bustudymate.in'> BUStudymate Blog</a>\n\nFor Instant Updates📢 Follow On <a href = 'https://instagram.com/bustudymate'>Instagram🖼️</a>\n\nFor 👩‍💻Discussion/Q & A⁉️ - <a href='https://forum.bustudymate.in'>Join BUForum</a>\n\nFeedbacks👏/ Report❌ Email ✉️ - admin@bustudymate.in\n\nDonate💵 to Run the Service - contact BUStudymate"
+
+
+def contactus(update, context):
+    update.message.reply_html(contactString, disable_web_page_preview=True)
 
 
 def end(update, context):
@@ -123,25 +162,40 @@ def callBackQuery(update, context):
 
 
 def getTimeTablefromQPCode(update, context):
-    query = update.message.text[8:].split(' ')
     context.bot.send_chat_action(
         chat_id=update.message.chat_id, action="typing")
-    try:
-        data = getTimeTablebyQPCode(query[0])
-        if(len(data) == 0):
-            raise Exception(
-                f"Sorry, Data Not Found for {query[0]} QP Code\nPlease Check QP Code and Try Again")
-        dataString = ""
-        for i, j in enumerate(data):
-            if i == 0:
-                heading = f"<b><u>{j['University']} {j['Course']} - Time Table </u></b>\n\n🎓 University - <b>{j['University']}</b>\n📚 Course - <b>{j['Course']}</b>\n📖 Semester - <b>{j['Sem']}</b>\n\n"
-                dataString += heading
-            singleData = f"📝 Subject Name - <b>{j['SubjectName']}</b>\n🗓️ Exam Date - <b>{j['Date']}</b>\n⏰ Exam Time - <b>{j['Time']}</b>\n❓ QP Code - <b>{j['QPCode']}</b>\n\n\n"
-            dataString += singleData
+    user = update.message.from_user
+    channel_member = context.bot.get_chat_member(
+        os.environ.get("CHANNEL_ID"), user_id=update.message.chat_id)
+    status = channel_member["status"]
+    if(status == 'left'):
+        context.bot.send_message(chat_id=update.message.chat_id,
+                                 text=f"Hi {user.first_name}, to use me(bot) you have to be a member of the BUStudymate channel in order to stay updated with the latest updates.\nPlease click below button to join and /start the bot again.", reply_markup=help_reply_markup)
+        return
+    else:
+        query = update.message.text[8:].split(' ')
+        context.bot.send_chat_action(
+            chat_id=update.message.chat_id, action="typing")
+        if len(query[0]) == 0:
+            qpText = f"Please enter QPCode after /qpcode command\nCheck /help if you have doubt or to know more"
+            update.message.reply_text(qpText)
+            return
+        try:
+            data = getTimeTablebyQPCode(query[0])
+            if(len(data) == 0):
+                raise Exception(
+                    f"Sorry, Data Not Found for {query[0]} QP Code\nPlease Check QP Code and Try Again")
+            dataString = ""
+            for i, j in enumerate(data):
+                if i == 0:
+                    heading = f"<b><u>{j['University']} {j['Course']} - Time Table </u></b>\n\n🎓 University - <b>{j['University']}</b>\n📚 Course - <b>{j['Course']}</b>\n📖 Semester - <b>{j['Sem']}</b>\n\n"
+                    dataString += heading
+                singleData = f"📝 Subject Name - <b>{j['SubjectName']}</b>\n🗓️ Exam Date - <b>{j['Date']}</b>\n⏰ Exam Time - <b>{j['Time']}</b>\n❓ QP Code - <b>{j['QPCode']}</b>\n\n\n"
+                dataString += singleData
 
-        update.message.reply_html(dataString)
-    except Exception as e:
-        update.message.reply_text(str(e))
+            update.message.reply_html(dataString)
+        except Exception as e:
+            update.message.reply_text(str(e))
 
 
 def error(update, context):
@@ -162,6 +216,7 @@ def main():
     # on different commands - answer in Telegram
     dispatcher.add_handler(CommandHandler("start", start))
     dispatcher.add_handler(CommandHandler("help", help_command))
+    dispatcher.add_handler(CommandHandler("contact", contactus))
     dispatcher.add_handler(CommandHandler("qpcode", getTimeTablefromQPCode))
     updater.dispatcher.add_handler(CallbackQueryHandler(callBackQuery))
 
