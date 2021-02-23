@@ -126,7 +126,7 @@ def contactus(update, context):
 
 def end(update, context):
     callBackData.clear()
-    update.callback_query.delete_message()
+    update.callback_query.message.delete()
     update.callback_query.message.reply_text(
         'if you want again send /start')
     update.callback_query.message.reply_text(
