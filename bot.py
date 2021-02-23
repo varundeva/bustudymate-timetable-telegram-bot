@@ -41,17 +41,27 @@ def createCourseKeyboard(callbackdata):
     return InlineKeyboardMarkup(keyboard)
 
 
-def sendTimeTable(callbackdata):
+def sendTimeTable(callbackdata, update):
     data = getTimeTable(callbackdata)
     dataString = ""
+    dataList = []
     for i, j in enumerate(data):
         if i == 0:
             heading = f"<b><u>{j['University']} {j['Course']} - Time Table </u></b>\n\n🎓 University - <b>{j['University']}</b>\n📚 Course - <b>{j['Course']}</b>\n📖 Semester - <b>{j['Sem']}</b>\n\n"
             dataString += heading
+
         singleData = f"📝 Subject Name - <b>{j['SubjectName']}</b>\n🗓️ Exam Date - <b>{j['Date']}</b>\n⏰ Exam Time - <b>{j['Time']}</b>\n❓ QP Code - <b>{j['QPCode']}</b>\n\n\n"
         dataString += singleData
-
-    return dataString
+        if i != 0 and i % 10 == 0:
+            dataList.append(dataString)
+            dataString = ""
+    print(len(dataList))
+    if len(dataList) == 0:
+        update.callback_query.edit_message_text(dataString, parse_mode="HTML")
+    else:
+        update.callback_query.delete_message()
+        for i in dataList:
+            update.callback_query.message.reply_html(i)
 
 
 help_keyboard = [[InlineKeyboardButton(
@@ -90,7 +100,6 @@ callBackData = []
 def callBackQuery(update, context):
     query_data = update.callback_query.data
     callBackData.append(query_data)
-    print(callBackData)
     update.callback_query.answer()
     try:
         if query_data in getAllUniversities():
@@ -101,15 +110,15 @@ def callBackQuery(update, context):
             update.callback_query.edit_message_text(
                 'Choose Your 📚Course⬇️', reply_markup=createCourseKeyboard(callBackData))
         if len(callBackData) == 3 and query_data in getAllCourseOfSemester(callBackData):
-            update.callback_query.edit_message_text(
-                sendTimeTable(callBackData), parse_mode="HTML")
+            sendTimeTable(callBackData, update)
             callBackData.clear()
             update.callback_query.message.reply_text(
                 'if you want again send /start')
         if len(callBackData) > 3:
             end(update, context)
 
-    except:
+    except Exception as e:
+        print(str(e))
         end(update, context)
 
 

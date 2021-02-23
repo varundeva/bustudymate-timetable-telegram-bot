@@ -1,31 +1,175 @@
 University,Course,Date,Time,Sem,QPCode,SubjectName
-BCU ,Bachelor of Arts (2018 Batch Only),08/03/2021,09:30 am - 12:30 pm,Fifth,10521,History : History of Modren India
-BCU ,Bachelor of Arts (2018 Batch Only),10/03/2021,09:30 am - 12:30 pm,Fifth,10522,History : History of China and Japan : 1900 AD
-BCU ,Bachelor of Arts (2018 Batch Only),10/03/2021,09:30 am - 12:30 pm,Fifth,10560,History: History of Europe 1500 - 1945
-BCU ,Bachelor of Arts (2018 Batch Only),12/03/2021,09:30 am - 12:30 pm,Fifth,10533,English (Optional) : Literatures of India: An Intr
-BCU ,Bachelor of Arts (2018 Batch Only),12/03/2021,09:30 am - 12:30 pm,Fifth,10558,Marketing V
-BCU ,Bachelor of Arts (2018 Batch Only),15/03/2021,09:30 am - 12:30 pm,Fifth,10534,"English (Optional): Europeanand Non-European
-Wri"
-BCU ,Bachelor of Arts (2018 Batch Only),15/03/2021,09:30 am - 12:30 pm,Fifth,10559,Marketing VI
-BCU ,Bachelor of Arts (2018 Batch Only),17/03/2021,09:30 am - 12:30 pm,Fifth,10537,Psychology : Counseling Psychology I
-BCU ,Bachelor of Arts (2018 Batch Only),17/03/2021,09:30 am - 12:30 pm,Fifth,10538,Psychology : Health psychology I
-BCU ,Bachelor of Arts (2018 Batch Only),17/03/2021,09:30 am - 12:30 pm,Fifth,10539,Psychology : Social Psychology I
-BCU ,Bachelor of Arts (2018 Batch Only),19/03/2021,09:30 am - 12:30 pm,Fifth,10540,Psychology : Industrial & Organizational psycholog
-BCU ,Bachelor of Arts (2018 Batch Only),19/03/2021,09:30 am - 12:30 pm,Fifth,10542,Psychology : Educationa l Psychology I
-BCU ,Bachelor of Arts (2018 Batch Only),19/03/2021,09:30 am - 12:30 pm,Fifth,10543,Psychology : Abnormal Psychology I
-BCU ,Bachelor of Arts (2018 Batch Only),22/03/2021,09:30 am - 12:30 pm,Fifth,90041,Banking and Finance
-BCU ,Bachelor of Arts (2018 Batch Only),22/03/2021,09:30 am - 12:30 pm,Fifth,90042,Building Mathematical Ability
-BCU ,Bachelor of Arts (2018 Batch Only),24/03/2021,09:30 am - 12:30 pm,Fifth,10527,Political Science : Indian Constitution Institutui
-BCU ,Bachelor of Arts (2018 Batch Only),24/03/2021,09:30 am - 12:30 pm,Fifth,10547,Home Science : Basic Nutrition and Family Meal Man
-BCU ,Bachelor of Arts (2018 Batch Only),24/03/2021,09:30 am - 12:30 pm,Fifth,10553,Music V
-BCU ,Bachelor of Arts (2018 Batch Only),26/03/2021,09:30 am - 12:30 pm,Fifth,10528,Politica l Science : International Politics
-BCU ,Bachelor of Arts (2018 Batch Only),26/03/2021,09:30 am - 12:30 pm,Fifth,10548,Home Science : Fashion Illustration and Clothing C
-BCU ,Bachelor of Arts (2018 Batch Only),26/03/2021,09:30 am - 12:30 pm,Fifth,10561,Music VI
-BCU ,Bachelor of Arts (2018 Batch Only),29/03/2021,09:30 am - 12:30 pm,Fifth,10551,Kannada (Optional) V
-BCU ,Bachelor of Arts (2018 Batch Only),29/03/2021,09:30 am - 12:30 pm,Fifth,10554,Tourism V
-BCU ,Bachelor of Arts (2018 Batch Only),29/03/2021,09:30 am - 12:30 pm,Fifth,10556,Communicative English V
-BCU ,Bachelor of Arts (2018 Batch Only),31/03/2021,09:30 am - 12:30 pm,Fifth,10523,Economics : Corporate Economics
-BCU ,Bachelor of Arts (2018 Batch Only),31/03/2021,09:30 am - 12:30 pm,Fifth,10535,Women Studies : Fundamentals of Fminists Theory
-BCU ,Bachelor of Arts (2018 Batch Only),31/03/2021,09:30 am - 12:30 pm,Fifth,10552,Kannada (Optional) VI
-BCU ,Bachelor of Arts (2018 Batch Only),31/03/2021,09:30 am - 12:30 pm,Fifth,10555,Tourism VI
-BCU ,Bachelor of Arts (2018 Batch Only),31/03/2021,09:30 am - 12:30 pm,Fifth,10557,Communicative English
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),8/3/2021,09:30 am - 12:30 pm,Fifth,10521,History : History of Modren India
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),10/3/2021,09:30 am - 12:30 pm,Fifth,10522,History : History of China and Japan : 1900 AD
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),10/3/2021,09:30 am - 12:30 pm,Fifth,10560,History: History of Europe 1500 - 1945
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),12/3/2021,09:30 am - 12:30 pm,Fifth,10533,English (Optional) : Literatures of India: An Intr
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),12/3/2021,09:30 am - 12:30 pm,Fifth,10558,Marketing V
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),15/03/2021,09:30 am - 12:30 pm,Fifth,10534,English (Optional): Europeanand Non-European Wri
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),15/03/2021,09:30 am - 12:30 pm,Fifth,10559,Marketing VI
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),17/03/2021,09:30 am - 12:30 pm,Fifth,10537,Psychology : Counseling Psychology I
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),17/03/2021,09:30 am - 12:30 pm,Fifth,10538,Psychology : Health psychology I
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),17/03/2021,09:30 am - 12:30 pm,Fifth,10539,Psychology : Social Psychology I
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),19/03/2021,09:30 am - 12:30 pm,Fifth,10540,Psychology : Industrial & Organizational psycholog
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),19/03/2021,09:30 am - 12:30 pm,Fifth,10542,Psychology : Educationa l Psychology I
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),19/03/2021,09:30 am - 12:30 pm,Fifth,10543,Psychology : Abnormal Psychology I
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),22/03/2021,09:30 am - 12:30 pm,Fifth,90041,Banking and Finance
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),22/03/2021,09:30 am - 12:30 pm,Fifth,90042,Building Mathematical Ability
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),24/03/2021,09:30 am - 12:30 pm,Fifth,10527,Political Science : Indian Constitution Institutui
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),24/03/2021,09:30 am - 12:30 pm,Fifth,10547,Home Science : Basic Nutrition and Family Meal Man
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),24/03/2021,09:30 am - 12:30 pm,Fifth,10553,Music V
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),26/03/2021,09:30 am - 12:30 pm,Fifth,10528,Politica l Science : International Politics
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),26/03/2021,09:30 am - 12:30 pm,Fifth,10548,Home Science : Fashion Illustration and Clothing C
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),26/03/2021,09:30 am - 12:30 pm,Fifth,10561,Music VI
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),29/03/2021,09:30 am - 12:30 pm,Fifth,10551,Kannada (Optional) V
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),29/03/2021,09:30 am - 12:30 pm,Fifth,10554,Tourism V
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),29/03/2021,09:30 am - 12:30 pm,Fifth,10556,Communicative English V
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),31/03/2021,09:30 am - 12:30 pm,Fifth,10523,Economics : Corporate Economics
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),31/03/2021,09:30 am - 12:30 pm,Fifth,10535,Women Studies : Fundamentals of Fminists Theory
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),31/03/2021,09:30 am - 12:30 pm,Fifth,10552,Kannada (Optional) VI
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),31/03/2021,09:30 am - 12:30 pm,Fifth,10555,Tourism VI
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),31/03/2021,09:30 am - 12:30 pm,Fifth,10557,Communicative English
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),3/4/2021,09:30 am - 12:30 pm,Fifth,10524,Economics : Mathematics for Economists
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),3/4/2021,09:30 am - 12:30 pm,Fifth,10525,Economics : Rural Development & Cooperation
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),3/4/2021,09:30 am - 12:30 pm,Fifth,10526,Economics of Tourism
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),3/4/2021,09:30 am - 12:30 pm,Fifth,10536,Women Studies: Gender Issues in India
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),5/4/2021,09:30 am - 12:30 pm,Fifth,10531,Journalism : Reporting
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),5/4/2021,09:30 am - 12:30 pm,Fifth,10544,Geography : Regional Geography of India
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),7/4/2021,09:30 am - 12:30 pm,Fifth,10532,Journalism: Editing
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),7/4/2021,09:30 am - 12:30 pm,Fifth,10545,Geography : Environmental Geography
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),7/4/2021,09:30 am - 12:30 pm,Fifth,10546,Geography : Settlement Geography
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),9/4/2021,09:30 am - 12:30 pm,Fifth,10529,Sociology: Sociology of Women
+Bangalore City University ,Bachelor of Arts (2018 Batch Only),12/4/2021,09:30 am - 12:30 pm,Fifth,10530,Sociology: Sociology of Health and Medicine
+Bangalore City University ,Bachelor in Audiology and Speech Language Pathology,8/3/2021,09:30 am - 12:30 pm,Fifth,17521,Structural Anomalies and Speech Disorders
+Bangalore City University ,Bachelor in Audiology and Speech Language Pathology,10/3/2021,09:30 am - 12:30 pm,Fifth,17522,Fluency and its Disorders
+Bangalore City University ,Bachelor in Audiology and Speech Language Pathology,12/3/2021,09:30 am - 12:30 pm,Fifth,17523,Pediatric Audiology
+Bangalore City University ,Bachelor in Audiology and Speech Language Pathology,15/03/2021,09:30 am - 12:30 pm,Fifth,17524,Aural Rehabilitation in Children
+Bangalore City University ,Bachelor in Audiology and Speech Language Pathology,17/03/2021,09:30 am - 12:30 pm,Fifth,17525,Clinicals in Speech Language Pathology
+Bangalore City University ,Bachelor in Audiology and Speech Language Pathology,19/03/2021,09:30 am - 12:30 pm,Fifth,17526,Clinicals in Audiology
+Bangalore City University ,Bachelor in Audiology and Speech Language Pathology,22/03/2021,09:30 am - 12:30 pm,Fifth,90041,Banking and Finance
+Bangalore City University ,Bachelor in Audiology and Speech Language Pathology,22/03/2021,09:30 am - 12:30 pm,Fifth,90042,Building Mathematical Ability
+Bangalore City University ,BBA (Aviation Management) (2018 Batch Only),8/3/2021,09:30 am - 12:30 pm,Fifth,18521,Marketing Research
+Bangalore City University ,BBA (Aviation Management) (2018 Batch Only),10/3/2021,09:30 am - 12:30 pm,Fifth,18522,Airline Finance and Insurance
+Bangalore City University ,BBA (Aviation Management) (2018 Batch Only),12/3/2021,09:30 am - 12:30 pm,Fifth,18523,Aviation Law and Aircraft Rules and Regulations
+Bangalore City University ,BBA (Aviation Management) (2018 Batch Only),15/03/2021,09:30 am - 12:30 pm,Fifth,18524,Air Traffic Control
+Bangalore City University ,BBA (Aviation Management) (2018 Batch Only),17/03/2021,09:30 am - 12:30 pm,Fifth,18525,Air Transportation Safety & Security
+Bangalore City University ,BBA (Aviation Management) (2018 Batch Only),19/03/2021,09:30 am - 12:30 pm,Fifth,18526,Mini Project On Airline Operations Industrial visi
+Bangalore City University ,BBA (Aviation Management) (2018 Batch Only),22/03/2021,09:30 am - 12:30 pm,Fifth,90044,"Culture, Diversity and Society"
+Bangalore City University ,BBA (Aviation Management) (2018 Batch Only),22/03/2021,09:30 am - 12:30 pm,Fifth,90046,German
+Bangalore City University ,BBA (Aviation Management) (2018 Batch Only),22/03/2021,09:30 am - 12:30 pm,Fifth,90047,French
+Bangalore City University ,BBA (Aviation Management) (2018 Batch Only),22/03/2021,09:30 am - 12:30 pm,Fifth,90048,Sanskrit
+Bangalore City University ,Bachelor of Computer Application (2018 Batch Only),8/3/2021,09:30 am - 12:30 pm,Fifth,15521,Data Communication and Networks
+Bangalore City University ,Bachelor of Computer Application (2018 Batch Only),10/3/2021,09:30 am - 12:30 pm,Fifth,15522,Software Engineering
+Bangalore City University ,Bachelor of Computer Application (2018 Batch Only),12/3/2021,09:30 am - 12:30 pm,Fifth,15523,Computer Architecture
+Bangalore City University ,Bachelor of Computer Application (2018 Batch Only),15/03/2021,09:30 am - 12:30 pm,Fifth,15524,Java Programming
+Bangalore City University ,Bachelor of Computer Application (2018 Batch Only),17/03/2021,09:30 am - 12:30 pm,Fifth,15525,Microprocessor and Assembly Language
+Bangalore City University ,Bachelor of Computer Application (2018 Batch Only),22/03/2021,09:30 am - 12:30 pm,Fifth,90041,Banking and Finance
+Bangalore City University ,Bachelor of Computer Application (2018 Batch Only),22/03/2021,09:30 am - 12:30 pm,Fifth,90043,Capital Market
+Bangalore City University ,Bachelor of Computer Application (2018 Batch Only),22/03/2021,09:30 am - 12:30 pm,Fifth,90046,German
+Bangalore City University ,Bachelor of Computer Application (2018 Batch Only),22/03/2021,09:30 am - 12:30 pm,Fifth,90047,French
+Bangalore City University ,Bachelor of Commerce (Honours) (2018 Batch Only),8/3/2021,09:30 am - 12:30 pm,Fifth,19521,Management Accounting
+Bangalore City University ,Bachelor of Commerce (Honours) (2018 Batch Only),10/3/2021,09:30 am - 12:30 pm,Fifth,19522,Logistics and Supply Chain Management
+Bangalore City University ,Bachelor of Commerce (Honours) (2018 Batch Only),12/3/2021,09:30 am - 12:30 pm,Fifth,19523,Auditing
+Bangalore City University ,Bachelor of Commerce (Honours) (2018 Batch Only),15/03/2021,09:30 am - 12:30 pm,Fifth,19524,Advanced Accounting
+Bangalore City University ,Bachelor of Commerce (Honours) (2018 Batch Only),15/03/2021,09:30 am - 12:30 pm,Fifth,19529,International Finance
+Bangalore City University ,Bachelor of Commerce (Honours) (2018 Batch Only),15/03/2021,09:30 am - 12:30 pm,Fifth,19534,Accounting Information Systems
+Bangalore City University ,Bachelor of Commerce (Honours) (2018 Batch Only),15/03/2021,09:30 am - 12:30 pm,Fifth,19539,International Banking & Forex Management
+Bangalore City University ,Bachelor of Commerce (Honours) (2018 Batch Only),17/03/2021,09:30 am - 12:30 pm,Fifth,19525,Accounting Standards
+Bangalore City University ,Bachelor of Commerce (Honours) (2018 Batch Only),17/03/2021,09:30 am - 12:30 pm,Fifth,19530,Strategic Financial Management
+Bangalore City University ,Bachelor of Commerce (Honours) (2018 Batch Only),17/03/2021,09:30 am - 12:30 pm,Fifth,19535,Enterprise Resource Planning
+Bangalore City University ,Bachelor of Commerce (Honours) (2018 Batch Only),17/03/2021,09:30 am - 12:30 pm,Fifth,19540,Life and General Insurance
+Bangalore City University ,Bachelor of Commerce (Honours) (2018 Batch Only),19/03/2021,09:30 am - 12:30 pm,Fifth,19526,Business Taxation
+Bangalore City University ,Bachelor of Commerce (Honours) (2018 Batch Only),19/03/2021,09:30 am - 12:30 pm,Fifth,19531,Corporate Financial Policy
+Bangalore City University ,Bachelor of Commerce (Honours) (2018 Batch Only),19/03/2021,09:30 am - 12:30 pm,Fifth,19536,Big Data Analytics
+Bangalore City University ,Bachelor of Commerce (Honours) (2018 Batch Only),19/03/2021,09:30 am - 12:30 pm,Fifth,19541,Risk Management
+Bangalore City University ,Bachelor of Commerce (Honours) (2018 Batch Only),22/03/2021,09:30 am - 12:30 pm,Fifth,90044,"Culture, Diversity and Society"
+Bangalore City University ,Bachelor of Commerce (Honours) (2018 Batch Only),22/03/2021,09:30 am - 12:30 pm,Fifth,90046,German
+Bangalore City University ,Bachelor of Commerce (Honours) (2018 Batch Only),22/03/2021,09:30 am - 12:30 pm,Fifth,90047,French
+Bangalore City University ,Bachelor of Commerce (Honours) (2018 Batch Only),22/03/2021,09:30 am - 12:30 pm,Fifth,90048,Sanskrit
+Bangalore City University ,Bachelor of Commerce (Honours) (2018 Batch Only),24/03/2021,09:30 am - 12:30 pm,Fifth,19527,Corporate Tax Planning
+Bangalore City University ,Bachelor of Commerce (Honours) (2018 Batch Only),24/03/2021,09:30 am - 12:30 pm,Fifth,19532,Security Analysis & Portfolio Management
+Bangalore City University ,Bachelor of Commerce (Honours) (2018 Batch Only),24/03/2021,09:30 am - 12:30 pm,Fifth,19537,Information Technology and Audit
+Bangalore City University ,Bachelor of Commerce (Honours) (2018 Batch Only),24/03/2021,09:30 am - 12:30 pm,Fifth,19542,Marketing oflnsurance Products
+Bangalore City University ,Bachelor of Commerce (Honours) (2018 Batch Only),26/03/2021,09:30 am - 12:30 pm,Fifth,19528,Indirect Tax
+Bangalore City University ,Bachelor of Commerce (Honours) (2018 Batch Only),26/03/2021,09:30 am - 12:30 pm,Fifth,19533,Financial Risk Management
+Bangalore City University ,Bachelor of Commerce (Honours) (2018 Batch Only),26/03/2021,09:30 am - 12:30 pm,Fifth,19538,Banking Technology and Management
+Bangalore City University ,Bachelor of Commerce (Honours) (2018 Batch Only),26/03/2021,09:30 am - 12:30 pm,Fifth,19543,Actuarial Science
+Bangalore City University ,Bachelor of Commerce (2018 Batch Only),8/3/2021,09:30 am - 12:30 pm,Fifth,13521,Entrepreneurship Development
+Bangalore City University ,Bachelor of Commerce (2018 Batch Only),10/3/2021,09:30 am - 12:30 pm,Fifth,13522,International Financial Reporting
+Bangalore City University ,Bachelor of Commerce (2018 Batch Only),12/3/2021,09:30 am - 12:30 pm,Fifth,13523,Income Tax - I
+Bangalore City University ,Bachelor of Commerce (2018 Batch Only),15/03/2021,09:30 am - 12:30 pm,Fifth,13524,Costing Methods
+Bangalore City University ,Bachelor of Commerce (2018 Batch Only),17/03/2021,09:30 am - 12:30 pm,Fifth,13525,Advanced Accounting
+Bangalore City University ,Bachelor of Commerce (2018 Batch Only),17/03/2021,09:30 am - 12:30 pm,Fifth,13527,International Financial Management
+Bangalore City University ,Bachelor of Commerce (2018 Batch Only),17/03/2021,09:30 am - 12:30 pm,Fifth,13529,Accounting Information Systems
+Bangalore City University ,Bachelor of Commerce (2018 Batch Only),17/03/2021,09:30 am - 12:30 pm,Fifth,13531,International Banking & Forex Management
+Bangalore City University ,Bachelor of Commerce (2018 Batch Only),19/03/2021,09:30 am - 12:30 pm,Fifth,13526,Goods and Services Tax
+Bangalore City University ,Bachelor of Commerce (2018 Batch Only),19/03/2021,09:30 am - 12:30 pm,Fifth,13530,Enterprise Resource Planning
+Bangalore City University ,Bachelor of Commerce (2018 Batch Only),19/03/2021,09:30 am - 12:30 pm,Fifth,13532,Life & General Insurance
+Bangalore City University ,Bachelor of Commerce (2018 Batch Only),22/03/2021,09:30 am - 12:30 pm,Fifth,90044,"Culture, Diversity and Society"
+Bangalore City University ,Bachelor of Commerce (2018 Batch Only),22/03/2021,09:30 am - 12:30 pm,Fifth,90046,German
+Bangalore City University ,Bachelor of Commerce (2018 Batch Only),22/03/2021,09:30 am - 12:30 pm,Fifth,90047,French
+Bangalore City University ,Bachelor of Commerce (2018 Batch Only),22/03/2021,09:30 am - 12:30 pm,Fifth,90048,Sanskrit
+Bangalore City University ,Bachelor of Commerce (TTM) (2018 Batch Only),8/3/2021,09:30 am - 12:30 pm,Fifth,13521,Entrepreneurship Development
+Bangalore City University ,Bachelor of Commerce (TTM) (2018 Batch Only),10/3/2021,09:30 am - 12:30 pm,Fifth,13522,Interanational Financial Reporting Standards
+Bangalore City University ,Bachelor of Commerce (TTM) (2018 Batch Only),12/3/2021,09:30 am - 12:30 pm,Fifth,13523,Income Tax - 1
+Bangalore City University ,Bachelor of Commerce (TTM) (2018 Batch Only),15/03/2021,09:30 am - 12:30 pm,Fifth,13524,Costing Methods
+Bangalore City University ,Bachelor of Commerce (TTM) (2018 Batch Only),17/03/2021,09:30 am - 12:30 pm,Fifth,13525,Advanced Accounting
+Bangalore City University ,Bachelor of Commerce (TTM) (2018 Batch Only),17/03/2021,09:30 am - 12:30 pm,Fifth,13527,International Financial Management
+Bangalore City University ,Bachelor of Commerce (TTM) (2018 Batch Only),17/03/2021,09:30 am - 12:30 pm,Fifth,13529,Accounting Information Systems
+Bangalore City University ,Bachelor of Commerce (TTM) (2018 Batch Only),17/03/2021,09:30 am - 12:30 pm,Fifth,13531,International Banking & Forex Management
+Bangalore City University ,Bachelor of Commerce (TTM) (2018 Batch Only),19/03/2021,09:30 am - 12:30 pm,Fifth,13526,Goods and Services Tax
+Bangalore City University ,Bachelor of Commerce (TTM) (2018 Batch Only),19/03/2021,09:30 am - 12:30 pm,Fifth,13530,Enterprise Resource Planning
+Bangalore City University ,Bachelor of Commerce (TTM) (2018 Batch Only),19/03/2021,09:30 am - 12:30 pm,Fifth,13532,Life & General Insurance
+Bangalore City University ,Bachelor of Commerce (TTM) (2018 Batch Only),22/03/2021,09:30 am - 12:30 pm,Fifth,90044,"Culture,Diversity and Society"
+Bangalore City University ,Bachelor of Commerce (TTM) (2018 Batch Only),22/03/2021,09:30 am - 12:30 pm,Fifth,90046,German
+Bangalore City University ,Bachelor of Commerce (TTM) (2018 Batch Only),22/03/2021,09:30 am - 12:30 pm,Fifth,90047,French
+Bangalore City University ,Bachelor of Commerce (TTM) (2018 Batch Only),22/03/2021,09:30 am - 12:30 pm,Fifth,90048,Sanskrit
+Bangalore City University ,Bachelor of Hotel Management (2018 Batch Only),22/03/2021,09:30 am - 12:30 pm,Fifth,90044,"Culture,Diversity and Society"
+Bangalore City University ,Bachelor of Hotel Management (2018 Batch Only),22/03/2021,09:30 am - 12:30 pm,Fifth,90046,German
+Bangalore City University ,Bachelor of Hotel Management (2018 Batch Only),22/03/2021,09:30 am - 12:30 pm,Fifth,90047,French
+Bangalore City University ,Bachelor of Hotel Management (2018 Batch Only),22/03/2021,09:30 am - 12:30 pm,Fifth,90048,Sanskrit
+Bangalore City University ,Bachelor of Science (2018 Batch Only),8/3/2021,09:30 am - 12:30 pm,Fifth,11521,Physics V
+Bangalore City University ,Bachelor of Science (2018 Batch Only),8/3/2021,09:30 am - 12:30 pm,Fifth,11554,ZoologyV
+Bangalore City University ,Bachelor of Science (2018 Batch Only),10/3/2021,09:30 am - 12:30 pm,Fifth,11522,Physics VI
+Bangalore City University ,Bachelor of Science (2018 Batch Only),10/3/2021,09:30 am - 12:30 pm,Fifth,11555,Zoology VI
+Bangalore City University ,Bachelor of Science (2018 Batch Only),12/3/2021,09:30 am - 12:30 pm,Fifth,11529,Computer Science V
+Bangalore City University ,Bachelor of Science (2018 Batch Only),12/3/2021,09:30 am - 12:30 pm,Fifth,11558,Microbiology V
+Bangalore City University ,Bachelor of Science (2018 Batch Only),15/03/2021,09:30 am - 12:30 pm,Fifth,11530,Computer Science VI
+Bangalore City University ,Bachelor of Science (2018 Batch Only),15/03/2021,09:30 am - 12:30 pm,Fifth,11559,Microbiology VI
+Bangalore City University ,Bachelor of Science (2018 Batch Only),17/03/2021,09:30 am - 12:30 pm,Fifth,10537,Psychology : Counseling Psychology I
+Bangalore City University ,Bachelor of Science (2018 Batch Only),17/03/2021,09:30 am - 12:30 pm,Fifth,10538,Psychology : Health psychology I
+Bangalore City University ,Bachelor of Science (2018 Batch Only),17/03/2021,09:30 am - 12:30 pm,Fifth,10539,Psychology : Social Psychology I
+Bangalore City University ,Bachelor of Science (2018 Batch Only),17/03/2021,09:30 am - 12:30 pm,Fifth,11523,Chemistry V
+Bangalore City University ,Bachelor of Science (2018 Batch Only),17/03/2021,09:30 am - 12:30 pm,Fifth,11533,Biochemistry V
+Bangalore City University ,Bachelor of Science (2018 Batch Only),19/03/2021,09:30 am - 12:30 pm,Fifth,10540,Psychology : Industrial &  Organizational psycholog
+Bangalore City University ,Bachelor of Science (2018 Batch Only),19/03/2021,09:30 am - 12:30 pm,Fifth,10542,Psychology : Educational Psychology I
+Bangalore City University ,Bachelor of Science (2018 Batch Only),19/03/2021,09:30 am - 12:30 pm,Fifth,10543,Psychology : Abnormal Psychology I
+Bangalore City University ,Bachelor of Science (2018 Batch Only),19/03/2021,09:30 am - 12:30 pm,Fifth,11524,Chemistry VI
+Bangalore City University ,Bachelor of Science (2018 Batch Only),19/03/2021,09:30 am - 12:30 pm,Fifth,11534,Biochemistry VI
+Bangalore City University ,Bachelor of Science (2018 Batch Only),22/03/2021,09:30 am - 12:30 pm,Fifth,90041,Banking Finacne
+Bangalore City University ,Bachelor of Science (2018 Batch Only),22/03/2021,09:30 am - 12:30 pm,Fifth,90043,Capital Market
+Bangalore City University ,Bachelor of Science (2018 Batch Only),22/03/2021,09:30 am - 12:30 pm,Fifth,90046,German
+Bangalore City University ,Bachelor of Science (2018 Batch Only),22/03/2021,09:30 am - 12:30 pm,Fifth,90047,French
+Bangalore City University ,Bachelor of Science (2018 Batch Only),24/03/2021,09:30 am - 12:30 pm,Fifth,10547,Home Science : Basic Nutrition and Family Meal Man
+Bangalore City University ,Bachelor of Science (2018 Batch Only),24/03/2021,09:30 am - 12:30 pm,Fifth,11531,Statistics V
+Bangalore City University ,Bachelor of Science (2018 Batch Only),24/03/2021,09:30 am - 12:30 pm,Fifth,11537,Genetics V
+Bangalore City University ,Bachelor of Science (2018 Batch Only),24/03/2021,09:30 am - 12:30 pm,Fifth,11564,Nutrition &  Dietetics : Basic Dietetics
+Bangalore City University ,Bachelor of Science (2018 Batch Only),26/03/2021,09:30 am - 12:30 pm,Fifth,10548,Home Science: Fashion Illustration and Clothing C
+Bangalore City University ,Bachelor of Science (2018 Batch Only),26/03/2021,09:30 am - 12:30 pm,Fifth,11532,Statistics VI
+Bangalore City University ,Bachelor of Science (2018 Batch Only),26/03/2021,09:30 am - 12:30 pm,Fifth,11538,Genetics VI
+Bangalore City University ,Bachelor of Science (2018 Batch Only),26/03/2021,09:30 am - 12:30 pm,Fifth,11565,Nutrition &  Dietetics : Community N rition
+Bangalore City University ,Bachelor of Science (2018 Batch Only),29/03/2021,09:30 am - 12:30 pm,Fifth,11527,Electronics V
+Bangalore City University ,Bachelor of Science (2018 Batch Only),29/03/2021,09:30 am - 12:30 pm,Fifth,11560,SericultureV
+Bangalore City University ,Bachelor of Science (2018 Batch Only),31/03/2021,09:30 am - 12:30 pm,Fifth,10523,Economics : Corporate Economics
+Bangalore City University ,Bachelor of Science (2018 Batch Only),31/03/2021,09:30 am - 12:30 pm,Fifth,11528,Electronics VI
+Bangalore City University ,Bachelor of Science (2018 Batch Only),31/03/2021,09:30 am - 12:30 pm,Fifth,11561,Sericulture VI
+Bangalore City University ,Bachelor of Science (2018 Batch Only),3/4/2021,09:30 am - 12:30 pm,Fifth,10524,Economics : Mathematics for Economists
+Bangalore City University ,Bachelor of Science (2018 Batch Only),3/4/2021,09:30 am - 12:30 pm,Fifth,11556,Biotechnology V
+Bangalore City University ,Bachelor of Science (2018 Batch Only),5/4/2021,09:30 am - 12:30 pm,Fifth,11535,Botany V
+Bangalore City University ,Bachelor of Science (2018 Batch Only),5/4/2021,09:30 am - 12:30 pm,Fifth,11557,Biotechnology VI
+Bangalore City University ,Bachelor of Science (2018 Batch Only),7/4/2021,09:30 am - 12:30 pm,Fifth,11536,Botany VI
+Bangalore City University ,Bachelor of Science (2018 Batch Only),9/4/2021,09:30 am - 12:30 pm,Fifth,10529,Sociology: Womens in India
+Bangalore City University ,Bachelor of Science (2018 Batch Only),9/4/2021,09:30 am - 12:30 pm,Fifth,11525,Mathematics V
+Bangalore City University ,Bachelor of Science (2018 Batch Only),9/4/2021,09:30 am - 12:30 pm,Fifth,11566,Rehabilitation Science V
+Bangalore City University ,Bachelor of Science (2018 Batch Only),12/4/2021,09:30 am - 12:30 pm,Fifth,10530,Sociology : Sociology of Health and Medicine
+Bangalore City University ,Bachelor of Science (2018 Batch Only),12/4/2021,09:30 am - 12:30 pm,Fifth,11526,Mathematics VI
+Bangalore City University ,Bachelor of Science (2018 Batch Only),12/4/2021,09:30 am - 12:30 pm,Fifth,11567,Rehabilitation Science VI
