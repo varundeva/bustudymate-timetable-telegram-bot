@@ -188,9 +188,9 @@ def getTimeTablefromQPCode(update, context):
             dataString = ""
             for i, j in enumerate(data):
                 if i == 0:
-                    heading = f"<b><u>Time Table of QPCode {j['QPCode']}</u></b>\n\n</b>\n\n"
+                    heading = f"<b><u>Time Table of QPCode {j['QPCode']}</u></b>\n\n\n"
                     dataString += heading
-                singleData = f"🎓 University - <b>{j['University']}</b>\n📚 Course - <b>{j['Course']}</b>\n📖 Semester - <b>{j['Sem']}\n📝 Subject Name - <b>{j['SubjectName']}</b>\n🗓️ Exam Date - <b>{j['Date']}</b>\n⏰ Exam Time - <b>{j['Time']}</b>\n❓ QP Code - <b>{j['QPCode']}</b>\n\n\n"
+                singleData = f"🎓 University - <b>{j['University']}</b>\n📚 Course - <b>{j['Course']}</b>\n📖 Semester - <b>{j['Sem']}</b>\n📝 Subject Name - <b>{j['SubjectName']}</b>\n🗓️ Exam Date - <b>{j['Date']}</b>\n⏰ Exam Time - <b>{j['Time']}</b>\n❓ QP Code - <b>{j['QPCode']}</b>\n\n\n"
                 dataString += singleData
 
             update.message.reply_html(dataString)
