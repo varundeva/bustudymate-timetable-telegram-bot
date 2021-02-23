@@ -59,7 +59,7 @@ def sendTimeTable(callbackdata, update):
     if len(dataList) == 0:
         update.callback_query.edit_message_text(dataString, parse_mode="HTML")
     else:
-        update.callback_query.delete_message()
+        update.callback_query.message.delete()
         for i in dataList:
             update.callback_query.message.reply_html(i)
 
