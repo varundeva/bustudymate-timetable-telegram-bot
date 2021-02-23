@@ -15,6 +15,19 @@ def getTimeTable(callBackData):
     return timetable
 
 
+def getTimeTablebyQPCode(qpcode):
+    with open('timetable.csv') as csv_file:
+        csv_reader = csv.reader(csv_file, delimiter=',')
+        timetable = []
+        heading = []
+        for i, row in enumerate(csv_reader):
+            if i == 0:
+                heading = row
+            elif ((qpcode == row[5])):
+                timetable.append(dict(zip(heading, row)))
+    return timetable
+
+
 def getAllCourseOfSemester(callBackData):
     with open('timetable.csv') as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')

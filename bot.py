@@ -113,6 +113,28 @@ def callBackQuery(update, context):
         end(update, context)
 
 
+def getTimeTablefromQPCode(update, context):
+    query = update.message.text[8:].split(' ')
+    context.bot.send_chat_action(
+        chat_id=update.message.chat_id, action="typing")
+    try:
+        data = getTimeTablebyQPCode(query[0])
+        if(len(data) == 0):
+            raise Exception(
+                f"Sorry, Data Not Found for {query[0]} QP Code\nPlease Check QP Code and Try Again")
+        dataString = ""
+        for i, j in enumerate(data):
+            if i == 0:
+                heading = f"<b><u>{j['University']} {j['Course']} - Time Table </u></b>\n\n🎓 University - <b>{j['University']}</b>\n📚 Course - <b>{j['Course']}</b>\n📖 Semester - <b>{j['Sem']}</b>\n\n"
+                dataString += heading
+            singleData = f"📝 Subject Name - <b>{j['SubjectName']}</b>\n🗓️ Exam Date - <b>{j['Date']}</b>\n⏰ Exam Time - <b>{j['Time']}</b>\n❓ QP Code - <b>{j['QPCode']}</b>\n\n\n"
+            dataString += singleData
+
+        update.message.reply_html(dataString)
+    except Exception as e:
+        update.message.reply_text(str(e))
+
+
 def error(update, context):
     """Log Errors caused by Updates."""
     logger.warning('Update "%s" caused error "%s"', update, context.error)
@@ -131,6 +153,7 @@ def main():
     # on different commands - answer in Telegram
     dispatcher.add_handler(CommandHandler("start", start))
     dispatcher.add_handler(CommandHandler("help", help_command))
+    dispatcher.add_handler(CommandHandler("qpcode", getTimeTablefromQPCode))
     updater.dispatcher.add_handler(CallbackQueryHandler(callBackQuery))
 
     dispatcher.add_error_handler(error)
