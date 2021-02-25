@@ -89,7 +89,7 @@ def sendTimeTable(context, update):
         update.callback_query.message.reply_html(
             footer, disable_web_page_preview=True)
     else:
-        update.callback_query.delete_message()
+        update.callback_query.message.delete()
         for i in dataList:
             update.callback_query.message.reply_html(i)
         update.callback_query.message.reply_html(
