@@ -3,6 +3,7 @@ import os
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from readFile import *
+from uuid import uuid4
 
 # Enable logging
 logging.basicConfig(
@@ -41,7 +42,7 @@ def help_command(update, context):
     update.message.reply_html(helpText)
 
 
-footer = f"<b>🤝All The Best for your Exams📚</b>\n<b>👏Do Well in All the Exams 📚</b>\n\n\n\n🔗Connect With Us\n\n\nFor Study Materials 📖 Check<a href='https://bustudymate.in'> BUStudymate Blog</a>\n\nFor Instant Updates📢 Follow On <a href = 'https://instagram.com/bustudymate'>Instagram🖼️</a>\n\nFor 👩‍💻Discussion/Q & A⁉️ - <a href='https://forum.bustudymate.in'>Join BUForum</a>\n\nFeedbacks👏/ Report❌ Email ✉️ - admin@bustudymate.in\n\nDonate💵 to Run the Service - contact BUStudymate"
+footer = f"<b>🤝All The Best for your Exams📚</b>\n<b>👏Do Well in All the Exams 📚</b>\n\n\n\n🔗Connect With Us\n\n\nFor Study Materials 📖 Check<a href='https://bustudymate.in'> BUStudymate Blog</a>\n\nFor Instant Updates📢 Follow On <a href = 'https://instagram.com/bustudymate'>Instagram🖼️</a>\n\nFor 👩‍💻Discussion/Q & A⁉️ - <a href='https://forum.bustudymate.in'>Join BUForum</a>\n\nFeedbacks👏/ Report❌ Email ✉️ - admin@bustudymate.in\n\nDonate💵 to Run the Service - @bustudymate4u"
 
 
 def createUniversityKeyboard():
@@ -52,25 +53,24 @@ def createUniversityKeyboard():
     return InlineKeyboardMarkup(keyboard)
 
 
-def createSemesterKeyboard(university):
-    semesters = getAllSemesterOfUniversity(university)
+def createSemesterKeyboard(context):
+    semesters = getAllSemesterOfUniversity(getResponseData(context, 0))
     keyboard = []
     for sem in semesters:
         keyboard.append([InlineKeyboardButton(sem, callback_data=sem)])
     return InlineKeyboardMarkup(keyboard)
 
 
-def createCourseKeyboard(callbackdata):
-    print(callbackdata)
-    courses = getAllCourseOfSemester(callbackdata)
+def createCourseKeyboard(context):
+    courses = getAllCourseOfSemester(context)
     keyboard = []
     for course in courses:
         keyboard.append([InlineKeyboardButton(course, callback_data=course)])
     return InlineKeyboardMarkup(keyboard)
 
 
-def sendTimeTable(callbackdata, update):
-    data = getTimeTable(callbackdata)
+def sendTimeTable(context, update):
+    data = getTimeTable(context)
     dataString = ""
     dataList = []
     for i, j in enumerate(data):
@@ -89,7 +89,7 @@ def sendTimeTable(callbackdata, update):
         update.callback_query.message.reply_html(
             footer, disable_web_page_preview=True)
     else:
-        update.callback_query.message.delete()
+        update.callback_query.delete_message()
         for i in dataList:
             update.callback_query.message.reply_html(i)
         update.callback_query.message.reply_html(
@@ -117,7 +117,7 @@ def start(update, context):
             'Choose Your 🎓University ⬇️', reply_markup=createUniversityKeyboard())
 
 
-contactString = "🔗Connect With Us\n\n\nFor Study Materials 📖 Check<a href='https://bustudymate.in'> BUStudymate Blog</a>\n\nFor Instant Updates📢 Follow On <a href = 'https://instagram.com/bustudymate'>Instagram🖼️</a>\n\nFor 👩‍💻Discussion/Q & A⁉️ - <a href='https://forum.bustudymate.in'>Join BUForum</a>\n\nFeedbacks👏/ Report❌ Email ✉️ - admin@bustudymate.in\n\nDonate💵 to Run the Service - contact BUStudymate"
+contactString = "🔗Connect With Us\n\n\nFor Study Materials 📖 Check<a href='https://bustudymate.in'> BUStudymate Blog</a>\n\nFor Instant Updates📢 Follow On <a href = 'https://instagram.com/bustudymate'>Instagram🖼️</a>\n\nFor 👩‍💻Discussion/Q & A⁉️ - <a href='https://forum.bustudymate.in'>Join BUForum</a>\n\nFeedbacks👏/ Report❌ Email ✉️ - admin@bustudymate.in\n\nDonate💵 to Run the Service - @bustudymate4u"
 
 
 def contactus(update, context):
@@ -125,35 +125,40 @@ def contactus(update, context):
 
 
 def end(update, context):
-    callBackData.clear()
+    context.user_data.clear()
     update.callback_query.delete_message()
     update.callback_query.message.reply_text(
-        'if you want again send /start')
+        'if you want again, send /start command')
     update.callback_query.message.reply_text(
-        'If its not working please contact us through BUStudymate Group')
+        'If its not working please report us use /contact to get contact details')
 
 
-callBackData = []
+def getResponseData(context, position):
+    return context.user_data.get(list(context.user_data.keys())[position])
 
 
 def callBackQuery(update, context):
     query_data = update.callback_query.data
-    callBackData.append(query_data)
+    key = str(uuid4())
+    context.user_data[key] = query_data
+    print(context.user_data)
     update.callback_query.answer()
     try:
         if query_data in getAllUniversities():
             update.callback_query.edit_message_text(
-                'Choose Your 📖Semester⬇️', reply_markup=createSemesterKeyboard(query_data))
-        print(len(callBackData))
-        if len(callBackData) == 2 and query_data in getAllSemesterOfUniversity(callBackData[0]):
+                'Choose Your 📖Semester⬇️', reply_markup=createSemesterKeyboard(context))
+
+        elif len(context.user_data) == 2 and query_data in getAllSemesterOfUniversity(getResponseData(context, 0)):
             update.callback_query.edit_message_text(
-                'Choose Your 📚Course⬇️', reply_markup=createCourseKeyboard(callBackData))
-        if len(callBackData) == 3 and query_data in getAllCourseOfSemester(callBackData):
-            sendTimeTable(callBackData, update)
-            callBackData.clear()
+                'Choose Your 📚Course⬇️', reply_markup=createCourseKeyboard(context))
+
+        elif len(context.user_data) == 3 and query_data in getAllCourseOfSemester(context):
+            sendTimeTable(context, update)
+            context.user_data.clear()
             update.callback_query.message.reply_text(
                 'if you want again send /start')
-        if len(callBackData) > 3:
+
+        if len(context.user_data) > 3:
             end(update, context)
 
     except Exception as e:
@@ -196,7 +201,8 @@ def getTimeTablefromQPCode(update, context):
             update.message.reply_html(dataString)
             update.message.reply_html(footer, disable_web_page_preview=True)
         except Exception as e:
-            update.message.reply_text(str(e))
+            print(str(e))
+            update.message.reply_text("Something Went Wrong\nReport to Admin")
 
 
 def error(update, context):
