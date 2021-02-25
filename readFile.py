@@ -1,6 +1,6 @@
 import csv
 import json
-from dev import getResponseData
+from bot import getResponseData
 
 
 def getTimeTable(context):
