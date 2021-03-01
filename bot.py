@@ -85,7 +85,7 @@ def sendTimeTable(context, update):
             dataString = ""
     if(dataString):
         dataList.append(dataString)
-    print("NUmber of Messsage" + len(dataString))
+    print("NUmber of Messsage" + str(len(dataString)))
     if len(dataList) == 0:
         update.callback_query.edit_message_text(dataString, parse_mode="HTML")
         update.callback_query.message.reply_html(
