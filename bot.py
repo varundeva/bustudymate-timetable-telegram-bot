@@ -4,7 +4,7 @@ from telegram.ext import Updater, CommandHandler, CallbackQueryHandler
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from readFile import *
 from uuid import uuid4
-import helpTexts
+import helpTexts as ht
 # Enable logging
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO
@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 
 def help_command(update, context):
-    update.message.reply_html(helpText)
+    update.message.reply_html(ht.helpText)
 
 
 def createUniversityKeyboard():
@@ -61,13 +61,13 @@ def sendTimeTable(context, update):
     if len(dataList) == 0:
         update.callback_query.edit_message_text(dataString, parse_mode="HTML")
         update.callback_query.message.reply_html(
-            footer, disable_web_page_preview=True)
+            ht.footer, disable_web_page_preview=True)
     else:
         update.callback_query.message.delete()
         for i in dataList:
             update.callback_query.message.reply_html(i)
         update.callback_query.message.reply_html(
-            footer, disable_web_page_preview=True)
+            ht.footer, disable_web_page_preview=True)
 
 
 help_keyboard = [[InlineKeyboardButton(
@@ -173,7 +173,7 @@ def getTimeTablefromQPCode(update, context):
                 dataString += singleData
 
             update.message.reply_html(dataString)
-            update.message.reply_html(footer, disable_web_page_preview=True)
+            update.message.reply_html(ht.footer, disable_web_page_preview=True)
         except Exception as e:
             print(str(e))
             update.message.reply_text("Something Went Wrong\nReport to Admin")
