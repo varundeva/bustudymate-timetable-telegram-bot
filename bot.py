@@ -85,6 +85,7 @@ def start(update, context):
     channel_member = context.bot.get_chat_member(
         os.environ.get("CHANNEL_ID"), user_id=update.message.chat_id)
     status = channel_member["status"]
+    lg.startLog(update, context, status)
     if(status == 'left'):
         update.message.reply_html(
             text=f"Hi {user.first_name}👋🏻, to use me(Bot🤖) you have to be a member of the BUStudymate channel in order to stay updated with the latest updates.\n\n<b>Please click below button to join and then /start the bot again.</b>", reply_markup=help_reply_markup)
