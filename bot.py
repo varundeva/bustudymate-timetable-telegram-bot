@@ -5,6 +5,7 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from readFile import *
 from uuid import uuid4
 import helpTexts as ht
+import log as lg
 # Enable logging
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO
@@ -62,12 +63,14 @@ def sendTimeTable(context, update):
         update.callback_query.edit_message_text(dataString, parse_mode="HTML")
         update.callback_query.message.reply_html(
             ht.footer, disable_web_page_preview=True)
+        lg.addToLog(context, update)
     else:
         update.callback_query.message.delete()
         for i in dataList:
             update.callback_query.message.reply_html(i)
         update.callback_query.message.reply_html(
             ht.footer, disable_web_page_preview=True)
+        lg.addToLog(context, update)
 
 
 help_keyboard = [[InlineKeyboardButton(
